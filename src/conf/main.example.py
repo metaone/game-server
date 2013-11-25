@@ -1,5 +1,6 @@
 """
-Config settings
+Config settings example
+Please copy and edit this file to main.py file
 
 :author Mykola Skorenkyi
 """

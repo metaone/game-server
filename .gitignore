@@ -35,3 +35,6 @@ nosetests.xml
 .pydevproject
 .env
 game-server.iml
+
+# Configs
+src/conf/main.py
