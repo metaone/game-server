@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-import handlers.main as main
-import handlers.auth as auth
+from handlers.main import MainHandler
+from handlers.login import LoginHandler
+from handlers.register import RegisterHandler
+
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
@@ -10,8 +12,9 @@ import conf.main as conf
 
 application = tornado.web.Application(
     [
-        (r'/ws', main.MainHandler),
-        (r'/auth', auth.AuthHandler)
+        (r'/ws', MainHandler),
+        (r'/login', LoginHandler),
+        (r'/register', RegisterHandler),
     ],
     db=motor.MotorClient().open_sync()[conf.settings['db_name']],
     cookie_secret=conf.settings['cookie_secret'],

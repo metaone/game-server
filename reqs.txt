@@ -1,2 +1,4 @@
 tornado==3.0.2
 motor==0.1.1
+validate_email==1.1
+bcrypt==1.0.2
